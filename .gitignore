@@ -6,3 +6,8 @@
 .idea/
 .gitignore
 *.xml
+__pycache__/
+dytt8/__pycache__/
+model/__pycache__/
+thread/__pycache__/
+utils/__pycache__/
