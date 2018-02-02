@@ -11,6 +11,7 @@ from thread.TopWorkThread import TopWorkThread
 from utils.Utils import Utils
 from pymongo import MongoClient, uri_parser
 from secret import mongo
+from datetime import datetime
 
 '''
     程序主入口
@@ -76,6 +77,7 @@ def insertData():
 
     while not TaskQueue.isContentQueueEmpty():
         item = TaskQueue.getContentQueue().get()
+        item['_created'] = item['_updated'] = datetime.utcnow().replace(microsecond=0)
         db.lastest_moive.insert_one(item)
         print('插入第 ' + str(count) + ' 条数据成功')
         count = count + 1
