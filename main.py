@@ -19,10 +19,10 @@ from secret import mongo
 '''
 
 # 截止到2017-08-08, 最新电影一共才有 164 个页面
-LASTEST_MOIVE_TOTAL_SUM = 6  # 164
+LASTEST_MOIVE_TOTAL_SUM = 169  # 164
 
-# 请求网络线程总数, 线程不要调太好, 不然会返回很多 400
-THREAD_SUM = 5
+# 请求网络线程总数, 线程不要调太高, 不然会返回很多 400
+THREAD_SUM = 2
 
 
 def getmongodb():
